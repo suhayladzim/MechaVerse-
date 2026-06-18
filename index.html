@@ -133,9 +133,9 @@
             
             <!-- 1. HALAMAN UTAMA -->
             <section id="utama" class="page-section active w-full">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-[70vh] flex items-center pt-10">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-[70vh] flex items-center pt-10 pb-16">
                     <div class="grid lg:grid-cols-2 gap-12 items-center w-full">
-                        <div class="reveal-item reveal-slide-left">
+                        <div class="reveal-item reveal-slide-left flex flex-col items-start text-left w-full">
                             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 text-sm mb-6 uppercase tracking-wider font-semibold">
                                 <i data-lucide="zap" class="w-4 h-4"></i> RBT Tingkatan 2
                             </div>
@@ -146,7 +146,7 @@
                             <p class="text-lg md:text-xl text-slate-400 mb-8 max-w-xl leading-relaxed">
                                 Terokai dunia sistem mekanikal melalui pembelajaran interaktif, visualisasi model 3D berkualiti tinggi dan pengalaman Augmented Reality (AR) yang imersif.
                             </p>
-                            <div class="flex flex-wrap gap-4">
+                            <div class="flex flex-wrap gap-4 w-full">
                                 <button onclick="navigateTo('pengenalan')" class="px-8 py-4 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-bold text-lg flex items-center gap-3 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(249,115,22,0.4)]">
                                     <i data-lucide="play-circle" class="w-6 h-6"></i> Mulakan Pembelajaran
                                 </button>
@@ -268,10 +268,10 @@
                            </video>
                         </div>
                     </div>
-              
-                    <div class="grid md:grid-cols-2 gap-12 items-center">
-                        <div class="reveal-item reveal-slide-left">
-                            <div class="glass-panel p-8 rounded-3xl relative overflow-hidden">
+                  
+                    <div class="grid md:grid-cols-2 gap-12 items-start w-full">
+                        <div class="reveal-item reveal-slide-left w-full" style="transition-delay: 150ms;">
+                            <div class="glass-panel p-8 rounded-3xl relative overflow-hidden h-full">
                                 <div class="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-bl-full blur-2xl"></div>
                                 <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
                                     <i data-lucide="info" class="text-orange-500"></i> Apa Itu Sistem Mekanikal?
@@ -284,8 +284,8 @@
                                 </p>
                             </div>
                         </div>
-              
-                        <div class="reveal-item reveal-slide-right space-y-6" style="transition-delay: 200ms;">
+                  
+                        <div class="reveal-item reveal-slide-right space-y-6 w-full" style="transition-delay: 200ms;">
                             <h3 class="text-xl font-bold mb-6 text-orange-400">Kepentingan Utama</h3>
                             
                             <div class="glass-panel p-5 rounded-2xl flex items-start gap-4 transform transition-all duration-300 hover:-translate-x-2 hover:border-orange-500/30">
@@ -348,7 +348,7 @@
                         <p class="text-slate-300 mt-4 max-w-2xl mx-auto text-lg leading-relaxed">Terokai bagaimana gabungan komponen mekanikal menghasilkan sistem yang berfungsi dengan cekap dalam pelbagai produk harian.</p>
                     </div>
               
-                    <div id="aplikasi-container" class="grid md:grid-cols-2 gap-10">
+                    <div id="aplikasi-container" class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto w-full">
                         <!-- Aplikasi akan dijana di sini oleh JS -->
                     </div>
                 </div>
@@ -436,25 +436,25 @@
                         <div class="w-24 h-1 bg-orange-500 mx-auto rounded-full box-glow"></div>
                     </div>
               
-                    <div class="reveal-item reveal-zoom relative w-full max-w-3xl mx-auto mb-16" style="transition-delay: 100ms;">
-                        <div class="relative z-10 w-full aspect-video glass-panel border-2 border-orange-500/50 rounded-2xl overflow-hidden box-glow group bg-slate-900/50 flex items-center justify-center">
-                           <!-- GANTIKAN PAUTAN src DI BAWAH DENGAN gambar_kumpulan.png ANDA -->
-                           <img src="https://via.placeholder.com/800x450/0f172a/f97316?text=Sila+masukkan+gambar+.png+anda+di+sini" alt="Gambar Ahli Kumpulan" class="w-full h-full object-cover relative z-10 opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div class="flex flex-col gap-10 items-center w-full max-w-4xl mx-auto">
+                        <div class="reveal-item reveal-fade-up relative w-full" style="transition-delay: 100ms;">
+                            <div class="relative z-10 w-full aspect-video glass-panel border-2 border-orange-500/50 rounded-2xl overflow-hidden box-glow group bg-slate-900/50 flex items-center justify-center">
+                               <!-- GANTIKAN PAUTAN src DI BAWAH DENGAN gambar_kumpulan.png ANDA -->
+                               <img src="https://via.placeholder.com/800x450/0f172a/f97316?text=Sila+masukkan+gambar+.png+anda+di+sini" alt="Gambar Ahli Kumpulan" class="w-full h-full object-cover relative z-10 opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
+                            </div>
                         </div>
-                    </div>
-              
-                    <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div class="reveal-item reveal-fade-right flex flex-col items-center text-center gap-4 mb-6">
+                  
+                        <div class="reveal-item reveal-fade-up flex flex-col items-center text-center gap-4 w-full" style="transition-delay: 150ms;">
                             <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center box-glow">
                                 <i data-lucide="settings" class="text-white w-10 h-10 animate-spin-slow"></i>
                             </div>
                             <span class="font-bold text-4xl tracking-wider text-white">Mecha<span class="text-orange-500">Verse</span></span>
-                            <p class="text-slate-300 leading-relaxed text-center">
+                            <p class="text-slate-300 leading-relaxed text-center max-w-lg">
                                 Platform Pembelajaran Interaktif Berasaskan Web dengan Integrasi Augmented Reality bagi Topik Komponen Mekanikal.
                             </p>
                         </div>
-              
-                        <div class="reveal-item reveal-fade-left glass-panel p-6 sm:p-8 rounded-3xl border border-slate-700" style="transition-delay: 200ms;">
+                  
+                        <div class="reveal-item reveal-fade-up glass-panel p-6 sm:p-8 rounded-3xl border border-slate-700 w-full" style="transition-delay: 200ms;">
                             <h4 class="text-white font-bold mb-6 text-xl border-b border-slate-700 pb-3 flex items-center gap-2">
                                 <i data-lucide="info" class="w-6 h-6 text-orange-500"></i> Maklumat E-Modul
                             </h4>
@@ -602,8 +602,8 @@
 
                 html += `
                 <div class="reveal-item reveal-fade-up" style="transition-delay: ${delay}ms;">
-                    <div class="glass-panel rounded-3xl p-6 lg:p-10 border border-slate-700/50 grid lg:grid-cols-2 gap-10">
-                        <div class="flex flex-col justify-center space-y-8">
+                    <div class="glass-panel rounded-3xl p-6 lg:p-10 border border-slate-700/50 flex flex-col gap-10 max-w-5xl mx-auto w-full">
+                        <div class="flex flex-col space-y-8 w-full">
                             <div>
                                 <h3 class="text-4xl font-bold mb-4 text-white flex items-center gap-4">
                                     ${comp.title}
