@@ -80,7 +80,14 @@
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     </style>
 </head>
-<body class="font-sans overflow-x-hidden selection:bg-orange-500/30 flex flex-col min-h-screen">
+<body class="font-sans overflow-x-hidden selection:bg-orange-500/30 flex flex-col min-h-screen relative">
+
+    <!-- AUDIO BACKGROUND -->
+    <!-- GANTIKAN PAUTAN src DI BAWAH DENGAN FILE .mp3 ANDA -->
+    <audio id="bg-music" loop autoplay>
+        <source src="lagu.mp3" type="audio/mpeg">
+        Pelayar anda tidak menyokong elemen audio.
+    </audio>
 
     <!-- Custom Cursor Glow -->
     <div id="cursor-glow" class="fixed inset-0 pointer-events-none z-0 opacity-40 transition-opacity duration-300 hidden md:block" style="background: radial-gradient(600px circle at 0px 0px, rgba(249, 115, 22, 0.08), transparent 40%)"></div>
@@ -133,7 +140,7 @@
             
             <!-- 1. HALAMAN UTAMA -->
             <section id="utama" class="page-section active w-full">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-[70vh] flex items-center pt-10 pb-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-[70vh] flex flex-col justify-center pt-10 pb-16">
                     <div class="grid lg:grid-cols-2 gap-12 items-center w-full">
                         <div class="reveal-item reveal-slide-left flex flex-col items-start text-left w-full">
                             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 text-sm mb-6 uppercase tracking-wider font-semibold">
@@ -258,63 +265,65 @@
                         <div class="w-24 h-1 bg-orange-500 mx-auto rounded-full box-glow"></div>
                     </div>
               
-                    <div class="reveal-item reveal-zoom relative w-full max-w-4xl mx-auto mb-16" style="transition-delay: 100ms;">
-                        <div class="relative z-10 w-full aspect-video glass-panel border-2 border-orange-500/50 rounded-2xl overflow-hidden box-glow group">
-                           <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 opacity-80 -z-10"></div>
-                           <video autoplay loop muted playsinline class="w-full h-full object-cover relative z-10 opacity-90 group-hover:opacity-100 transition-opacity duration-500">
-                              <!-- GANTIKAN PAUTAN DI BAWAH DENGAN video_pengenalan.mp4 ANDA -->
-                              <source src="video-pengenalan.mp4" type="video/mp4" />
-                              Pelayar anda tidak menyokong tag video ini.
-                           </video>
-                        </div>
-                    </div>
-                  
-                    <div class="grid md:grid-cols-2 gap-12 items-start w-full">
-                        <div class="reveal-item reveal-slide-left w-full" style="transition-delay: 150ms;">
-                            <div class="glass-panel p-8 rounded-3xl relative overflow-hidden h-full">
-                                <div class="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-bl-full blur-2xl"></div>
-                                <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
-                                    <i data-lucide="info" class="text-orange-500"></i> Apa Itu Sistem Mekanikal?
-                                </h3>
-                                <p class="text-slate-300 leading-relaxed mb-6">
-                                    Sistem mekanikal ialah gabungan beberapa komponen yang berfungsi untuk memindahkan daya, mengubah arah pergerakan, mengubah kelajuan pergerakan atau menghasilkan sesuatu pergerakan yang dikehendaki.
-                                </p>
-                                <p class="text-slate-300 leading-relaxed">
-                                    Setiap komponen mempunyai fungsi tersendiri dan bekerja secara sinergi untuk menghasilkan gerakan yang cekap bagi memudahkan kehidupan manusia.
-                                </p>
+                    <div class="flex flex-col gap-12 items-center w-full max-w-6xl mx-auto">
+                        <div class="reveal-item reveal-zoom relative w-full max-w-4xl" style="transition-delay: 100ms;">
+                            <div class="relative z-10 w-full aspect-video glass-panel border-2 border-orange-500/50 rounded-2xl overflow-hidden box-glow group">
+                               <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 opacity-80 -z-10"></div>
+                               <video autoplay loop muted playsinline class="w-full h-full object-cover relative z-10 opacity-90 group-hover:opacity-100 transition-opacity duration-500">
+                                  <!-- GANTIKAN PAUTAN DI BAWAH DENGAN video_pengenalan.mp4 ANDA -->
+                                  <source src="video-pengenalan.mp4" type="video/mp4" />
+                                  Pelayar anda tidak menyokong tag video ini.
+                               </video>
                             </div>
                         </div>
                   
-                        <div class="reveal-item reveal-slide-right space-y-6 w-full" style="transition-delay: 200ms;">
-                            <h3 class="text-xl font-bold mb-6 text-orange-400">Kepentingan Utama</h3>
-                            
-                            <div class="glass-panel p-5 rounded-2xl flex items-start gap-4 transform transition-all duration-300 hover:-translate-x-2 hover:border-orange-500/30">
-                                <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center flex-shrink-0 border border-slate-700">
-                                    <span class="text-orange-500 font-bold">1</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-lg text-slate-100">Pemindahan Daya</h4>
-                                    <p class="text-sm text-slate-400 mt-1">Membantu memindahkan tenaga dan daya dengan efisien.</p>
-                                </div>
-                            </div>
-
-                            <div class="glass-panel p-5 rounded-2xl flex items-start gap-4 transform transition-all duration-300 hover:-translate-x-2 hover:border-orange-500/30">
-                                <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center flex-shrink-0 border border-slate-700">
-                                    <span class="text-orange-500 font-bold">2</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-lg text-slate-100">Beban Kerja</h4>
-                                    <p class="text-sm text-slate-400 mt-1">Memudahkan kerja manusia dalam aktiviti harian.</p>
+                        <div class="grid md:grid-cols-2 gap-12 items-start w-full">
+                            <div class="reveal-item reveal-slide-left w-full" style="transition-delay: 150ms;">
+                                <div class="glass-panel p-8 rounded-3xl relative overflow-hidden h-full">
+                                    <div class="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-bl-full blur-2xl"></div>
+                                    <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                                        <i data-lucide="info" class="text-orange-500"></i> Apa Itu Sistem Mekanikal?
+                                    </h3>
+                                    <p class="text-slate-300 leading-relaxed mb-6">
+                                        Sistem mekanikal ialah gabungan beberapa komponen yang berfungsi untuk memindahkan daya, mengubah arah pergerakan, mengubah kelajuan pergerakan atau menghasilkan sesuatu pergerakan yang dikehendaki.
+                                    </p>
+                                    <p class="text-slate-300 leading-relaxed">
+                                        Setiap komponen mempunyai fungsi tersendiri dan bekerja secara sinergi untuk menghasilkan gerakan yang cekap bagi memudahkan kehidupan manusia.
+                                    </p>
                                 </div>
                             </div>
-
-                            <div class="glass-panel p-5 rounded-2xl flex items-start gap-4 transform transition-all duration-300 hover:-translate-x-2 hover:border-orange-500/30">
-                                <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center flex-shrink-0 border border-slate-700">
-                                    <span class="text-orange-500 font-bold">3</span>
+                      
+                            <div class="reveal-item reveal-slide-right space-y-6 w-full" style="transition-delay: 200ms;">
+                                <h3 class="text-xl font-bold mb-6 text-orange-400">Kepentingan Utama</h3>
+                                
+                                <div class="glass-panel p-5 rounded-2xl flex items-start gap-4 transform transition-all duration-300 hover:-translate-x-2 hover:border-orange-500/30">
+                                    <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center flex-shrink-0 border border-slate-700">
+                                        <span class="text-orange-500 font-bold">1</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-lg text-slate-100">Pemindahan Daya</h4>
+                                        <p class="text-sm text-slate-400 mt-1">Membantu memindahkan tenaga dan daya dengan efisien.</p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h4 class="font-bold text-lg text-slate-100">Kecekapan Tenaga</h4>
-                                    <p class="text-sm text-slate-400 mt-1">Meningkatkan kecekapan penggunaan tenaga mesin.</p>
+
+                                <div class="glass-panel p-5 rounded-2xl flex items-start gap-4 transform transition-all duration-300 hover:-translate-x-2 hover:border-orange-500/30">
+                                    <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center flex-shrink-0 border border-slate-700">
+                                        <span class="text-orange-500 font-bold">2</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-lg text-slate-100">Beban Kerja</h4>
+                                        <p class="text-sm text-slate-400 mt-1">Memudahkan kerja manusia dalam aktiviti harian.</p>
+                                    </div>
+                                </div>
+
+                                <div class="glass-panel p-5 rounded-2xl flex items-start gap-4 transform transition-all duration-300 hover:-translate-x-2 hover:border-orange-500/30">
+                                    <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center flex-shrink-0 border border-slate-700">
+                                        <span class="text-orange-500 font-bold">3</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-lg text-slate-100">Kecekapan Tenaga</h4>
+                                        <p class="text-sm text-slate-400 mt-1">Meningkatkan kecekapan penggunaan tenaga mesin.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -513,6 +522,11 @@
         </div>
     </main>
 
+    <!-- FLOATING AUDIO TOGGLE BUTTON -->
+    <button id="audio-toggle-btn" class="fixed bottom-6 right-6 z-50 p-4 rounded-full bg-slate-800/80 backdrop-blur-md text-orange-500 border border-orange-500/50 shadow-[0_0_15px_rgba(249,115,22,0.3)] hover:bg-slate-700 hover:scale-110 transition-all duration-300">
+        <i data-lucide="volume-x" id="audio-icon" class="w-6 h-6"></i>
+    </button>
+
     <!-- Script Aplikasi Logik -->
     <script>
         // --- DATA ---
@@ -684,6 +698,53 @@
         renderAplikasi();
 
         // --- INTERACTIVITY LOGIC ---
+
+        // Audio Logic with Robust Error Handling
+        const bgMusic = document.getElementById('bg-music');
+        const audioToggleBtn = document.getElementById('audio-toggle-btn');
+        const audioIcon = document.getElementById('audio-icon');
+        let isMusicPlaying = false;
+
+        function attemptPlay() {
+            const playPromise = bgMusic.play();
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    isMusicPlaying = true;
+                    audioIcon.setAttribute('data-lucide', 'volume-2');
+                    lucide.createIcons();
+                }).catch((error) => {
+                    isMusicPlaying = false;
+                    audioIcon.setAttribute('data-lucide', 'volume-x');
+                    lucide.createIcons();
+                    console.log("Audio autoplay blocked or failed to load:", error);
+                });
+            }
+        }
+
+        // Try to play immediately (might be blocked by browser)
+        attemptPlay();
+
+        // Try to play on first user interaction if it was blocked initially
+        const firstInteraction = () => {
+            if (!isMusicPlaying) {
+                attemptPlay();
+            }
+            document.body.removeEventListener('click', firstInteraction);
+        };
+        document.body.addEventListener('click', firstInteraction, { once: true });
+
+        // Manual Audio Toggle
+        audioToggleBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Elak dari mengganggu klik interaksi pertama
+            if (bgMusic.paused) {
+                attemptPlay();
+            } else {
+                bgMusic.pause();
+                isMusicPlaying = false;
+                audioIcon.setAttribute('data-lucide', 'volume-x');
+                lucide.createIcons();
+            }
+        });
 
         // Custom Cursor
         document.addEventListener('mousemove', (e) => {
